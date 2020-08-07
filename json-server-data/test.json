@@ -1,0 +1,219 @@
+{
+  "allProducts": [
+    {
+      "id": 1,
+      "category_name": "Electronics",
+      "product_name": "MI 32 HD TV",
+      "product_price": "220",
+      "product_quantity": "3",
+      "product_img": "images/prod1.jpg"
+    },
+    {
+      "category_name": "Electronics",
+      "product_name": "OnePlus QLED TV",
+      "product_price": "230",
+      "product_quantity": "7",
+      "product_img": "images/prod2.jpg",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "category_name": "Electronics",
+      "product_name": "Micromax UHD LED",
+      "product_price": "120",
+      "product_quantity": "4",
+      "product_img": "images/prod2.jpg"
+    },
+    {
+      "id": 4,
+      "category_name": "Electronics",
+      "product_name": "Smart Watch E2",
+      "product_price": "140",
+      "product_quantity": "1",
+      "product_img": "images/prod4.jpg"
+    },
+    {
+      "id": 5,
+      "category_name": "Electronics",
+      "product_name": "Samsung Galaxy Watch",
+      "product_price": "250",
+      "product_quantity": "2",
+      "product_img": "images/prod5.jpg"
+    },
+    {
+      "id": 6,
+      "category_name": "Accessories",
+      "product_name": "Fostelo Catlin HandBag",
+      "product_price": "150",
+      "product_quantity": "4",
+      "product_img": "images/prod6.jpg"
+    },
+    {
+      "id": 7,
+      "category_name": "Accessories",
+      "product_name": "Typify Leather Bag",
+      "product_price": "165",
+      "product_quantity": "3",
+      "product_img": "images/prod7.jpg"
+    },
+    {
+      "id": 8,
+      "category_name": "Electronics",
+      "product_name": "OnePlus 7Pro",
+      "product_price": "125",
+      "product_quantity": "5",
+      "product_img": "images/prod8.jpg"
+    },
+    {
+      "id": 9,
+      "category_name": "Electronics",
+      "product_name": "Apple Iphone XR",
+      "product_price": "220",
+      "product_quantity": "1",
+      "product_img": "images/prod9.jpg"
+    },
+    {
+      "id": 10,
+      "category_name": "Electronics",
+      "product_name": "Samsung Galaxy S20",
+      "product_price": "230",
+      "product_quantity": "3",
+      "product_img": "images/prod9.jpg"
+    }
+  ],
+  "allUsers": [
+    {
+      "id": 1,
+      "first_name": "Saloni",
+      "last_name": "Agrawal",
+      "email_id": "saloni@cts.com",
+      "password": "test123"
+    },
+    {
+      "id": 2,
+      "first_name": "Shashank",
+      "last_name": "Agrawal",
+      "email_id": "shashank@gmail.com",
+      "password": "test123"
+    },
+    {
+      "first_name": "sanjay",
+      "last_name": "agrawal",
+      "email_id": "sanjay@cts.com",
+      "password": "sanjay28",
+      "id": 3
+    }
+  ],
+  "allCategories": [
+    {
+      "id": 1,
+      "category_name": "Electronics"
+    },
+    {
+      "id": 2,
+      "category_name": "Accessories"
+    }
+  ],
+  "inventory": [
+    {
+      "id": 1,
+      "product_name": "MI 32 HD TV",
+      "week1": "10",
+      "week2": "8",
+      "week3": "23",
+      "week4": "17",
+      "week5": "9",
+      "week6": "11"
+    },
+    {
+      "id": 2,
+      "product_name": "OnePlus QLED TV",
+      "week1": "18",
+      "week2": "12",
+      "week3": "20",
+      "week4": "17",
+      "week5": "9",
+      "week6": "15"
+    },
+    {
+      "id": 3,
+      "product_name": "Micromax UHD LED",
+      "week1": "12",
+      "week2": "5",
+      "week3": "15",
+      "week4": "20",
+      "week5": "9",
+      "week6": "20"
+    },
+    {
+      "id": 4,
+      "product_name": "Smart Watch E2",
+      "week1": "8",
+      "week2": "16",
+      "week3": "22",
+      "week4": "12",
+      "week5": "9",
+      "week6": "15"
+    },
+    {
+      "id": 5,
+      "product_name": "Samsung Galaxy Watch",
+      "week1": "14",
+      "week2": "18",
+      "week3": "5",
+      "week4": "17",
+      "week5": "9",
+      "week6": "21"
+    },
+    {
+      "id": 6,
+      "product_name": "Fostelo Catlin HandBag",
+      "week1": "5",
+      "week2": "8",
+      "week3": "23",
+      "week4": "14",
+      "week5": "9",
+      "week6": "16"
+    },
+    {
+      "id": 7,
+      "product_name": "Typify Leather Bag",
+      "week1": "7",
+      "week2": "12",
+      "week3": "20",
+      "week4": "13",
+      "week5": "9",
+      "week6": "22"
+    },
+    {
+      "id": 8,
+      "product_name": "OnePlus 7Pro",
+      "week1": "5",
+      "week2": "10",
+      "week3": "15",
+      "week4": "8",
+      "week5": "19",
+      "week6": "11"
+    },
+    {
+      "id": 9,
+      "product_name": "Apple Iphone XR",
+      "week1": "9",
+      "week2": "14",
+      "week3": "23",
+      "week4": "18",
+      "week5": "9",
+      "week6": "15"
+    },
+    {
+      "id": 10,
+      "product_name": "Samsung Galaxy S20",
+      "week1": "10",
+      "week2": "8",
+      "week3": "17",
+      "week4": "23",
+      "week5": "9",
+      "week6": "18"
+    }
+  ]
+}
