@@ -39,8 +39,8 @@ class ProductDetails extends Component {
                         <p>Quantity: {this.props.quantity}</p>
                     </div>
                     </div>
-                    <button className="button button1" onClick={this.editProductClick}>Edit</button>
-                    <button className="button button2" onClick={this.deleteClick}>Delete</button>
+                    <button className="button button2" style={{float: "right"}} onClick={this.deleteClick}>Delete</button>
+                    <button className="button button1" style={{float: "right"}} onClick={this.editProductClick}>Edit</button>
                 </div>
             </div>
         );

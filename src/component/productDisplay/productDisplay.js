@@ -58,15 +58,17 @@ class ProductDisplay extends Component {
         // console.log("hii")
         return this.state.allProducts.map(product => {
             return (
-                    <ProductDetails
-                        key={product.id}
-                        id={product.id}
-                        name={product.product_name}
-                        price={product.product_price}
-                        quantity={product.product_quantity}
-                        img={product.product_img}
-                        deleteProduct={this.deleteProduct}
-                    ></ProductDetails>
+                <div  key={product.id} className="prod-column">
+                <ProductDetails
+                    key={product.id}
+                    id={product.id}
+                    name={product.product_name}
+                    price={product.product_price}
+                    quantity={product.product_quantity}
+                    img={product.product_img}
+                    deleteProduct={this.deleteProduct}
+                ></ProductDetails>
+                </div>
             )
         })
     }
@@ -131,7 +133,9 @@ class ProductDisplay extends Component {
                             <button type="submit"><i className="fa fa-search"></i></button>
                         </form>
                     </div>
+                    <div className="prod-row">
                         {this.displayProducts()}
+                    </div>
                 </div>
             </div>
         );

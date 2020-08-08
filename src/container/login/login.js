@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './login.css';
 import { Link, withRouter } from 'react-router-dom';
 import axios from 'axios';
+// import {imgsrc} from '/logo512.png'
 
 class LoginComponent extends Component {
     constructor(props) {

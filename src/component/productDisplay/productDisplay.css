@@ -1,4 +1,4 @@
-
+/* For ADD BUTTON */
 .button {
   border: none;
   color: white;
@@ -16,21 +16,36 @@
   background-color: blue
 }
 
-.button2 {
-  background-color: red
+/* For search by category */
+.input-category {
+  width: 25%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
 }
 
-.home-page {
+.select-category {
+  display: inline-block;
+  /* float: right; */
+  width: 40%;
+  /* margin-top: 6px; */
+  /* margin-left: 600px; */
+}
+
+
+/* .home-page { */
     /* height: 100%; */
     /* width: 83%; with searchfilter */
     /* top: 55px; */
-    width: 100%;
+    /* width: 100%; */
     /* margin-left: 235px; */
     /* overflow-y: scroll; */
     /* border: 1px solid black; */
     /* background-color: #f5f5f5; */
-  }
+  /* } */
 
+  /* For search bar */
   .search-container {
     float: right;
     padding: 6px;
@@ -60,37 +75,35 @@
     display: block;
   }
 
-  .input-category {
-    width: 25%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    resize: vertical;
-  }
+  /* Float four columns side by side */
+.prod-column {
+  float: left;
+  width: 33%;
+  padding: 0 10px;
+}
 
-  .select-category {
-    display: inline-block;
-    /* float: right; */
-    width: 40%;
-    /* margin-top: 6px; */
-    /* margin-left: 600px; */
-  }
+/* Remove extra left and right margins, due to padding */
+.prod-row {margin: 0 -5px;}
 
-  /* .product-col {
-    float: left;
+/* Clear floats after the columns */
+.prod-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 1024px) {
+  .prod-column {
+    width: 50%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .prod-column {
     width: 100%;
-  } */
-  /* .product-row:after {
-    content: "";
-    display: table;
-    clear: both;
-  } */
-
-  /* @media screen and (max-width: 720px) {
-    .product-col {
-      float: left;
-      width: 100%;
-      padding: 10px;
-      height: 300px; 
-    }
-  } */
+    display: block;
+    margin-bottom: 20px;
+  }
+}

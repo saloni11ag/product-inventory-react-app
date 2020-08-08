@@ -9,6 +9,7 @@ class EditProductForm extends Component {
         this.state = {
             category_name: '',
             product_name: '',
+            product_img: '',
             product_price: '',
             product_quantity: '',
             errors: {}
@@ -125,9 +126,12 @@ class EditProductForm extends Component {
 
     submitClicked = (event) => {
         console.log("submit clicked!!")
+        let imgsrc = this.state.product_img.substr(12);
+        let prodImg = 'images/' + imgsrc
         // console.log(this.state)
         let reqBody = {
             "product_name": this.state.product_name,
+            "product_img": prodImg,
             "product_price": this.state.product_price,
             "product_quantity": this.state.product_quantity,
         }
@@ -141,22 +145,6 @@ class EditProductForm extends Component {
                     console.error(error);
                 }
             )
-        // let reqBody = {
-        //     "product_name": this.state.product_name,
-        //     "product_price": this.state.product_price,
-        //     "product_quantity": this.state.product_quantity,
-        // }
-        // axios.patch('http://localhost:3000/allProducts/' + this.state.id, reqBody)
-        //     .then(
-        //         response => {
-        //             // console.log(response);
-        //             this.props.history.push('/home');
-        //             // this.props.history.push('/')
-        //         }, error => {
-        //             console.error(error);
-        //         }
-        //     )
-        // event.preventDefault()
         alert("Editted Product")
     }
     render() {
@@ -181,6 +169,14 @@ class EditProductForm extends Component {
                             <input type="text" className="input-text" id="productname" name="product_name" value={this.state.product_name}
                                 placeholder="Enter Product Name.." onChange={this.changeHandler} title="Name should consists of letters and greater than length 3" required />
                             <span style={{ color: "red", fontSize: "14px" }}>{this.state.errors["productname"]}</span>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-25">
+                            <label >Product Image:</label>
+                        </div>
+                        <div className="col-75">
+                            <input type="file" className="input-text" id="product_img" name="product_img" onChange={this.changeHandler} />
                         </div>
                     </div>
                     <div className="row">

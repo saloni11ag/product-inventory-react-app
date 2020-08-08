@@ -77,7 +77,7 @@ class GraphDisplayComponent extends Component {
     rendorAllGraphs = () => {
         return this.state.allInventory.map(obj => {
             return (
-                <div className="graph-col">
+                <div key ={obj.id} className="graph-col">
                     <GraphDetailsComponent
                         key={obj.id}
                         product_name={obj.product_name}

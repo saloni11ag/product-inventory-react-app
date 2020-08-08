@@ -99,10 +99,10 @@ class AddProductForm extends Component {
     }
     submitProduct = (event) => {
         console.log("submit clicked!!")
-        console.log(this.state)
+        // console.log(this.state)
         let imgsrc = this.state.product_img.substr(12);
         let prodImg = 'images/' + imgsrc
-        console.log("imgsrc" + prodImg)
+        // console.log("imgsrc" + prodImg)
         let reqBody = {
             "category_name": this.state.categoryname,
             "product_name": this.state.productname,
