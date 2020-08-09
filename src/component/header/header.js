@@ -8,12 +8,13 @@ class HeaderComponent extends Component {
         this.state = {}
     }
 
-    componentWillMount() {
-        var pathArray = window.location.href.split("/");
-        let pathName = pathArray[3]
-        console.log(pathName)
-        this.setState({pathName: pathName})
-    }
+    // componentWillMount() {
+    //     var pathArray = window.location.href.split("/");
+    //     let pathName = pathArray[3]
+    //     console.log(pathName)
+    //     this.setState({pathName: pathName})
+    //     console.log("dashboard props"+this.props.dashboard)
+    // }
     render() {
         return (
             <div>
@@ -21,7 +22,7 @@ class HeaderComponent extends Component {
                     <ul id="navbar">
                         <li className="navbar-items"><Link className="navbar-items-links" to="/home"
                             >HOME</Link></li>
-                        {this.state.pathName !== 'dashboard' && <li className="navbar-items"><Link className="navbar-items-links" to="/dashboard">DASHBOARD</Link></li>}
+                        {!this.props.dashboard && <li className="navbar-items"><Link className="navbar-items-links" to="/dashboard">DASHBOARD</Link></li>}
                         <li className="navbar-items" style={{float:"right", borderLeft:"1px solid #bbb"}}><Link className="navbar-items-links"
                             to="/">LOGOUT</Link></li>
                         {/* <li className="navbar-items" style={{float:"right", borderLeft:"1px solid #bbb"}}><Link className="navbar-items-links"

@@ -30,6 +30,12 @@ class ProductDisplay extends Component {
             }, error => {
                 console.error(error)
             })
+        axios.delete('http://localhost:3000/inventory/' + id)
+            .then(response => {
+                // console.log(response)
+            }, error => {
+                console.error(error)
+            })
     }
 
     getAllProducts = () => {
@@ -58,16 +64,16 @@ class ProductDisplay extends Component {
         // console.log("hii")
         return this.state.allProducts.map(product => {
             return (
-                <div  key={product.id} className="prod-column">
-                <ProductDetails
-                    key={product.id}
-                    id={product.id}
-                    name={product.product_name}
-                    price={product.product_price}
-                    quantity={product.product_quantity}
-                    img={product.product_img}
-                    deleteProduct={this.deleteProduct}
-                ></ProductDetails>
+                <div key={product.id} className="prod-column">
+                    <ProductDetails
+                        key={product.id}
+                        id={product.id}
+                        name={product.product_name}
+                        price={product.product_price}
+                        quantity={product.product_quantity}
+                        img={product.product_img}
+                        deleteProduct={this.deleteProduct}
+                    ></ProductDetails>
                 </div>
             )
         })

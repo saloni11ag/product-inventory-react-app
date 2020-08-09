@@ -11,7 +11,7 @@ class DashboardComponent extends Component {
     render() { 
         return ( 
             <div>
-                <HeaderComponent></HeaderComponent>
+                <HeaderComponent dashboard={true}></HeaderComponent>
                 <GraphDisplayComponent></GraphDisplayComponent>
             </div>
          );
