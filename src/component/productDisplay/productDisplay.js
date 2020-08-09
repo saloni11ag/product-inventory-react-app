@@ -124,7 +124,7 @@ class ProductDisplay extends Component {
         return (
             <div>
                 <div className="home-page">
-                    <button className="button button1" onClick={this.addProductClick}>Add Product</button>
+                    <button className="addbutton button1" onClick={this.addProductClick}>Add Product</button>
                     <div className="select-category">
                         <span style={{ marginLeft: "50px" }}>Select By Category  </span>
                         <select name="categoryname" className="input-category" onChange={this.selectChange} >

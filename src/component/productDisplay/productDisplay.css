@@ -1,12 +1,12 @@
 /* For ADD BUTTON */
-.button {
+.addbutton {
   border: none;
   color: white;
   padding: 15px 15px;
   text-align: center;
   text-decoration: none;
   /* display: inline-block; */
-  margin: 4px 2px;
+  margin: 4px 20px;
   cursor: pointer;
   font-size: 10px;
   /* float: right; */

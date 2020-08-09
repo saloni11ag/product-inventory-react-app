@@ -38,7 +38,7 @@
       "product_name": "Samsung Galaxy Watch",
       "product_price": "250",
       "product_quantity": "2",
-      "product_img": "images/prod5.jpg"
+      "product_img": "images/prod4.jpg"
     },
     {
       "id": 6,
@@ -79,6 +79,22 @@
       "product_price": "230",
       "product_quantity": "3",
       "product_img": "images/prod9.jpg"
+    },
+    {
+      "id": 11,
+      "category_name": "Clothing",
+      "product_name": "Puma Mens Seawalk",
+      "product_price": "150",
+      "product_quantity": "4",
+      "product_img": "images/prod11.jpg"
+    },
+    {
+      "id": 12,
+      "category_name": "Clothing",
+      "product_name": "Levis Women 721 skin fit",
+      "product_price": "180",
+      "product_quantity": "7",
+      "product_img": "images/prod12.jpg"
     }
   ],
   "allUsers": [
@@ -112,6 +128,10 @@
     {
       "id": 2,
       "category_name": "Accessories"
+    },
+    {
+      "id": 3,
+      "category_name": "Clothing"
     }
   ],
   "inventory": [
@@ -214,6 +234,26 @@
       "week4": "23",
       "week5": "9",
       "week6": "18"
+    },
+    {
+      "id": 11,
+      "product_name": "Puma Men's Seawalk",
+      "week1": "13",
+      "week2": "6",
+      "week3": "20",
+      "week4": "23",
+      "week5": "19",
+      "week6": "15"
+    },
+    {
+      "id": 12,
+      "product_name": "Levis Women skin fit",
+      "week1": "8",
+      "week2": "14",
+      "week3": "22",
+      "week4": "27",
+      "week5": "19",
+      "week6": "9"
     }
   ]
 }
