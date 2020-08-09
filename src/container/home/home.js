@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import HeaderComponent from '../../component/header/header';
-import SidebarComponent from '../../component/sidebar/sidebar';
 import ProductDisplay from '../../component/productDisplay/productDisplay';
 
 class HomeComponent extends Component {

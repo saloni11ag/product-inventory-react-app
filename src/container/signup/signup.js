@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './signup.css';
-import { Link, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import axios from 'axios';
 
 class SignupComponent extends Component {
@@ -19,8 +19,6 @@ class SignupComponent extends Component {
         // console.log(event.target)
         let name = event.target.name;
         let val = event.target.value;
-        // console.log("name"+name)
-        // console.log("value"+val)
         this.setState({ [name]: val });
         console.log(this.state)
         // this.handleValidation()

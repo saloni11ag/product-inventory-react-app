@@ -45,7 +45,6 @@ class GraphDisplayComponent extends Component {
                     this.setState({
                         allInventory: response.data
                     })
-                    // console.log(this.state)
                 }, error => {
                     console.error(error);
                 }
@@ -67,7 +66,6 @@ class GraphDisplayComponent extends Component {
                         week5: response.data.week5,
                         week6: response.data.week6
                     })
-                    // console.log(this.state)
                 }, error => {
                     console.error(error);
                 }

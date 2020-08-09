@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './productDisplay.css'
 import ProductDetails from '../productDetails/productDetails';
-import { Link, withRouter } from 'react-router-dom';
+import {  withRouter } from 'react-router-dom';
 import axios from 'axios';
 
 class ProductDisplay extends Component {
@@ -44,7 +44,6 @@ class ProductDisplay extends Component {
                 // console.log(response.data)
                 this.setState({ allProducts: response.data })
                 this.setState({ searchProducts: response.data })
-                // console.log(this.state.allProducts);
             }, error => {
                 console.error(error);
             })
@@ -55,13 +54,11 @@ class ProductDisplay extends Component {
             .then(response => {
                 // console.log(response.data)
                 this.setState({ allCategories: response.data })
-                // console.log(this.state.allProducts);
             }, error => {
                 console.error(error);
             })
     }
     displayProducts = () => {
-        // console.log("hii")
         return this.state.allProducts.map(product => {
             return (
                 <div key={product.id} className="prod-column">
@@ -86,7 +83,7 @@ class ProductDisplay extends Component {
     handleChange = (event) => {
         let name = event.target.name;
         let val = event.target.value;
-        // console.log("search value"+val)
+
         if (val === '') {
             this.setState({ allProducts: this.state.searchProducts })
         }
@@ -100,7 +97,6 @@ class ProductDisplay extends Component {
     }
 
     selectChange = (event) => {
-        // console.log("in select change")
         // let name = event.target.name;
         let val = event.target.value;
         // console.log(val)

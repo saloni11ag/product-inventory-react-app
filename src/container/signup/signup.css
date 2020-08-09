@@ -31,11 +31,7 @@
     border: white;
     outline: white;
 }
-/* input-tag:internal-autofill-selected {
-    background-color: white;
-    background-image: none !important;
-    color: -internal-light-dark-color(black, white) !important;
-} */
+
 #signup-submit{
     background-color: black;
     color: whitesmoke;

@@ -38,12 +38,6 @@ class GraphDetailsComponent extends Component {
                 />
             </div>
         );
-
-        // return (
-        //     <div  style={{display: "inline"}}>
-        //         <img src={graphsrc} alt="inventory-graph" height="450" className="inventory-chart" />
-        //     </div>
-        // );
     }
 }
 

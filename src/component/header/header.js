@@ -25,8 +25,6 @@ class HeaderComponent extends Component {
                         {!this.props.dashboard && <li className="navbar-items"><Link className="navbar-items-links" to="/dashboard">DASHBOARD</Link></li>}
                         <li className="navbar-items" style={{float:"right", borderLeft:"1px solid #bbb"}}><Link className="navbar-items-links"
                             to="/">LOGOUT</Link></li>
-                        {/* <li className="navbar-items" style={{float:"right", borderLeft:"1px solid #bbb"}}><Link className="navbar-items-links"
-                            to="#profile">PROFILE</Link></li> */}
                          {/* <li className="navbar-items"><Link className="navbar-items-links" to="/home"
                              style={{float:"right",  borderLeft:"1px solid #bbb"}}
                             >HOME</Link></li> */}

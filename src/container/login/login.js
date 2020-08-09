@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './login.css';
 import { Link, withRouter } from 'react-router-dom';
 import axios from 'axios';
-// import {imgsrc} from '/logo512.png'
 
 class LoginComponent extends Component {
     constructor(props) {
@@ -26,7 +25,6 @@ class LoginComponent extends Component {
             .then(response => {
                 // console.log(response.data)
                 this.setState({ allUsers: response.data })
-                // console.log(this.state.allProducts);
             }, error => {
                 console.error(error);
             })
@@ -36,8 +34,6 @@ class LoginComponent extends Component {
         // console.log(event.target)
         let name = event.target.name;
         let val = event.target.value;
-        // console.log("name"+name)
-        // console.log("value"+val)
         this.setState({ [name]: val });
         // console.log(this.state)
     }

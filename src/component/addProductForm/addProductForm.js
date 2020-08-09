@@ -8,7 +8,6 @@ class AddProductForm extends Component {
         super(props);
         this.state = {
             categoryname: 'Electronics',
-            // productcode: '',
             productname: '',
             product_img: '',
             productquantity: '',
@@ -23,7 +22,6 @@ class AddProductForm extends Component {
             .then(response => {
                 // console.log(response.data)
                 this.setState({ allCategories: response.data })
-                // console.log(this.state.allProducts);
             }, error => {
                 console.error(error);
             })

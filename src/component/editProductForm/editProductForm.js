@@ -20,9 +20,6 @@ class EditProductForm extends Component {
         // console.log(this.props);
         var pathArray = window.location.href.split("/");
         // console.log("patharray"+pathArray)
-        //  console.log("type" + pathArray[3]);
-        // console.log("id" + pathArray[4]);
-        // console.log(this.props.location.state.productid)
         let id = pathArray[4]
         this.getProductInfo(id)
     }
@@ -37,8 +34,8 @@ class EditProductForm extends Component {
                         category_name: response.data.category_name,
                         product_name: response.data.product_name,
                         product_price: response.data.product_price,
-                        product_quantity: response.data.product_quantity
-                        // product_img: "https://images-na.ssl-images-amazon.com/images/I/81okXpygfCL._SL1500_.jpg"
+                        product_quantity: response.data.product_quantity,
+                        product_img: response.data.product_img
                     })
                     // console.log(this.state)
                 }, error => {
@@ -176,7 +173,7 @@ class EditProductForm extends Component {
                             <label >Product Image:</label>
                         </div>
                         <div className="col-75">
-                            <input type="file" className="input-text" id="product_img" name="product_img" onChange={this.changeHandler} />
+                            <input type="file" className="input-text" id="product_img" name="product_img" onChange={this.changeHandler} required />
                         </div>
                     </div>
                     <div className="row">

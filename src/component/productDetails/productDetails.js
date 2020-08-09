@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './productDetails.css'
-import { Link, withRouter } from 'react-router-dom';
+import {  withRouter } from 'react-router-dom';
 
 class ProductDetails extends Component {
     constructor(props) {
