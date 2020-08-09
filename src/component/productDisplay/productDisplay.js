@@ -104,7 +104,7 @@ class ProductDisplay extends Component {
         // let name = event.target.name;
         let val = event.target.value;
         // console.log(val)
-        if (val === '') {
+        if (val === "all") {
             this.setState({ allProducts: this.state.searchProducts })
         } else {
             let filteredProducts = this.state.searchProducts.filter(prod => {
@@ -121,15 +121,20 @@ class ProductDisplay extends Component {
     }
 
     render() {
+
+    // let categoriesInDropdown = this.state.allCategories.map(cat => {
+    //     return (<option key={cat.id} value={cat.category_name}>{cat.category_name}</option>)
+    // })
         return (
             <div>
                 <div className="home-page">
                     <button className="button button1" onClick={this.addProductClick}>Add Product</button>
                     <div className="select-category">
-                        <span style={{ marginLeft: "50px" }}>Select By Category</span>
+                        <span style={{ marginLeft: "50px" }}>Select By Category  </span>
                         <select name="categoryname" className="input-category" onChange={this.selectChange} >
-                            <option></option>
+                            <option value= "all">All Categories</option>
                             {this.displayCategories()}
+                            {/* {categoriesInDropdown} */}
                         </select>
                     </div>
                     <div className="search-container">
