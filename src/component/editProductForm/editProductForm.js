@@ -129,12 +129,13 @@ class EditProductForm extends Component {
     submitClicked = (event) => {
         console.log("submit clicked!!")
         // console.log(this.state.product_img);
-        let imgPath =  this.state.product_img.substr(0,6);
+        let imgPath = this.state.product_img.substr(0, 6);
         let imgsrc = this.state.product_img.substr(12);
-        if(imgPath === 'images'){
-            var prodImg = this.state.product_img
-        } else{
-        var prodImg = 'images/' + imgsrc
+        let prodImg
+        if (imgPath === 'images') {
+            prodImg = this.state.product_img
+        } else {
+            prodImg = 'images/' + imgsrc
         }
         // console.log(this.state)
         let reqBody = {
@@ -153,20 +154,20 @@ class EditProductForm extends Component {
                     console.error(error);
                 }
             )
-            let inventoryreqBody = {
-                "product_name": this.state.product_name,
-                "week6": this.state.product_quantity,
-            }
-            axios.patch('http://localhost:3000/inventory/' + this.state.id, inventoryreqBody)
-                .then(
-                    response => {
-                        // console.log(response);
-                        this.props.history.push('/home');
-                        // this.props.history.push('/')
-                    }, error => {
-                        console.error(error);
-                    }
-                )
+        let inventoryreqBody = {
+            "product_name": this.state.product_name,
+            "week6": this.state.product_quantity,
+        }
+        axios.patch('http://localhost:3000/inventory/' + this.state.id, inventoryreqBody)
+            .then(
+                response => {
+                    // console.log(response);
+                    this.props.history.push('/home');
+                    // this.props.history.push('/')
+                }, error => {
+                    console.error(error);
+                }
+            )
         alert("Editted Product")
     }
     render() {

@@ -68,7 +68,7 @@ class SignupComponent extends Component {
             let lastAtPos = emailid.lastIndexOf('@');
             let lastDotPos = emailid.lastIndexOf('.');
 
-            if (!(lastAtPos < lastDotPos && lastAtPos > 0 && emailid.indexOf('@@') == -1 && lastDotPos > 2 && (emailid.length - lastDotPos) > 2)) {
+            if (!(lastAtPos < lastDotPos && lastAtPos > 0 && emailid.indexOf('@@') === -1 && lastDotPos > 2 && (emailid.length - lastDotPos) > 2)) {
                 formIsValid = false;
                 errors["emailid"] = "Email is not valid";
             }
