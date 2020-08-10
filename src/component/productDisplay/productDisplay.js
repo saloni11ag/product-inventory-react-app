@@ -80,6 +80,10 @@ class ProductDisplay extends Component {
         this.props.history.push('/addProduct')
     }
 
+    addCategoryClick = () => {
+        this.props.history.push('/addCategory')
+    }
+
     handleChange = (event) => {
         let name = event.target.name;
         let val = event.target.value;
@@ -125,6 +129,7 @@ class ProductDisplay extends Component {
             <div>
                 <div className="home-page">
                     <button className="addbutton button1" onClick={this.addProductClick}>Add Product</button>
+                    <button className="addbutton button1" onClick={this.addCategoryClick}>Add Category</button>
                     <div className="select-category">
                         <span style={{ marginLeft: "50px" }}>Select By Category  </span>
                         <select name="categoryname" className="input-category" onChange={this.selectChange} >

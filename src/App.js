@@ -7,6 +7,7 @@ import HomeComponent from './container/home/home';
 import DashboardComponent from './container/dashboard/dashboard';
 import AddProduct from './component/addProduct/addProduct';
 import EditProduct from './component/editProduct/editProduct';
+import AddCategory from './component/addCategory/addCategory';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
        <Route exact path="/dashboard/" component={DashboardComponent} /> 
        <Route exact path="/dashboard/:id" component={DashboardComponent} /> 
        <Route exact path="/addProduct" component={AddProduct} /> 
+       <Route exact path="/addCategory" component={AddCategory} /> 
        <Route exact path="/editProduct/:id" render={() => <EditProduct />} /> 
       </Switch>
     </div>
