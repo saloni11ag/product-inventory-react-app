@@ -40,6 +40,7 @@ class AddProductForm extends Component {
         let productname = this.state.productname;
         let productquantity = this.state.productquantity
         let productprice = this.state.productprice
+        console.log(this.state.productquantity)
         let errors = {};
         let formIsValid = true;
 
@@ -60,6 +61,11 @@ class AddProductForm extends Component {
         if (!productquantity) {
             formIsValid = false;
             errors["productquantity"] = "Cannot be empty";
+        }
+
+        if (productquantity === "0") {
+            formIsValid = false;
+            errors["productquantity"] = "Should be more than 0";
         }
 
         if (typeof productquantity !== "undefined") {

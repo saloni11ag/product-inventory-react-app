@@ -88,6 +88,11 @@ class EditProductForm extends Component {
             errors["productquantity"] = "Cannot be empty";
         }
 
+        if (productquantity === "0") {
+            formIsValid = false;
+            errors["productquantity"] = "Should be more than 0";
+        }
+
         if (typeof productquantity !== "undefined") {
             if (productquantity.match(/^[a-zA-Z]+$/)) {
                 formIsValid = false;
