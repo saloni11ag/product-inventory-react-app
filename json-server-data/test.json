@@ -3,7 +3,7 @@
     {
       "id": 1,
       "category_name": "Electronics",
-      "product_name": "MI 32 HD TV",
+      "product_name": "MI HD TV",
       "product_price": "220",
       "product_quantity": "3",
       "product_img": "images/prod1.jpg"
@@ -12,7 +12,7 @@
       "category_name": "Electronics",
       "product_name": "OnePlus QLED TV",
       "product_price": "230",
-      "product_quantity": "7",
+      "product_quantity": "9",
       "product_img": "images/prod2.jpg",
       "id": 2
     },
@@ -27,7 +27,7 @@
     {
       "id": 4,
       "category_name": "Electronics",
-      "product_name": "Smart Watch E2",
+      "product_name": "Smart Watch",
       "product_price": "140",
       "product_quantity": "1",
       "product_img": "images/prod4.jpg"
@@ -59,7 +59,7 @@
     {
       "id": 8,
       "category_name": "Electronics",
-      "product_name": "OnePlus 7Pro",
+      "product_name": "OnePlus Pro",
       "product_price": "125",
       "product_quantity": "5",
       "product_img": "images/prod8.jpg"
@@ -75,7 +75,7 @@
     {
       "id": 10,
       "category_name": "Electronics",
-      "product_name": "Samsung Galaxy S20",
+      "product_name": "Samsung Galaxy S",
       "product_price": "230",
       "product_quantity": "3",
       "product_img": "images/prod9.jpg"
@@ -91,7 +91,7 @@
     {
       "id": 12,
       "category_name": "Clothing",
-      "product_name": "Levis Women 721 skin fit",
+      "product_name": "Levis Women skin fit",
       "product_price": "180",
       "product_quantity": "7",
       "product_img": "images/prod12.jpg"
@@ -137,7 +137,7 @@
   "inventory": [
     {
       "id": 1,
-      "product_name": "MI 32 HD TV",
+      "product_name": "MI HD TV",
       "week1": "10",
       "week2": "8",
       "week3": "23",
@@ -153,7 +153,7 @@
       "week3": "20",
       "week4": "17",
       "week5": "9",
-      "week6": "15"
+      "week6": "9"
     },
     {
       "id": 3,
@@ -167,7 +167,7 @@
     },
     {
       "id": 4,
-      "product_name": "Smart Watch E2",
+      "product_name": "Smart Watch",
       "week1": "8",
       "week2": "16",
       "week3": "22",
@@ -207,7 +207,7 @@
     },
     {
       "id": 8,
-      "product_name": "OnePlus 7Pro",
+      "product_name": "OnePlus Pro",
       "week1": "5",
       "week2": "10",
       "week3": "15",
@@ -227,7 +227,7 @@
     },
     {
       "id": 10,
-      "product_name": "Samsung Galaxy S20",
+      "product_name": "Samsung Galaxy S",
       "week1": "10",
       "week2": "8",
       "week3": "17",

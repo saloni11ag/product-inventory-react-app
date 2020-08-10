@@ -147,6 +147,20 @@ class EditProductForm extends Component {
                     console.error(error);
                 }
             )
+            let inventoryreqBody = {
+                "product_name": this.state.product_name,
+                "week6": this.state.product_quantity,
+            }
+            axios.patch('http://localhost:3000/inventory/' + this.state.id, inventoryreqBody)
+                .then(
+                    response => {
+                        // console.log(response);
+                        this.props.history.push('/home');
+                        // this.props.history.push('/')
+                    }, error => {
+                        console.error(error);
+                    }
+                )
         alert("Editted Product")
     }
     render() {
