@@ -30,3 +30,9 @@
 
 
 /* for multiple charts */
+@media screen and (max-width: 600px) {
+.inventory-chart {
+  width: 400px !important;
+  height: 350px !important;
+  }
+}
