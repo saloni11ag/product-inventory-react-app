@@ -128,6 +128,8 @@ class EditProductForm extends Component {
 
     submitClicked = (event) => {
         console.log("submit clicked!!")
+        let inventoryInfo = this.state.inventoryInfo
+        let inventoryreqBody
         // console.log(this.state.product_img);
         let imgPath = this.state.product_img.substr(0, 6);
         let imgsrc = this.state.product_img.substr(12);
@@ -154,10 +156,35 @@ class EditProductForm extends Component {
                     console.error(error);
                 }
             )
-        let inventoryreqBody = {
-            "product_name": this.state.product_name,
-            "week6": this.state.product_quantity,
+        if (!inventoryInfo.week2 ) {
+            console.log("in week2");
+            inventoryreqBody = {
+                "product_name": this.state.product_name,
+                "week2": this.state.product_quantity,
+            }
+        } else if ( !inventoryInfo.week3) {
+            inventoryreqBody = {
+                "product_name": this.state.product_name,
+                "week3": this.state.product_quantity,
+            }
+        } else if( !inventoryInfo.week4){
+            inventoryreqBody = {
+                "product_name": this.state.product_name,
+                "week4": this.state.product_quantity,
+            }
+        }  else if( !inventoryInfo.week5){
+            inventoryreqBody = {
+                "product_name": this.state.product_name,
+                "week5": this.state.product_quantity,
+            }
+        }  else{
+            console.log("in week6");
+            inventoryreqBody = {
+                "product_name": this.state.product_name,
+                "week6": this.state.product_quantity,
+            }
         }
+
         axios.patch('http://localhost:3000/inventory/' + this.state.id, inventoryreqBody)
             .then(
                 response => {
