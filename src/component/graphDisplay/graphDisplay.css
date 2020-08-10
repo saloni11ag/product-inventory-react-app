@@ -8,7 +8,7 @@
 
   .graph-col {
     float: left;
-    width: 50%;
+    width: 33%;
     padding: 10px;
     height: 300px; /* Should be removed. Only for demonstration */
   }
@@ -16,6 +16,12 @@
     content: "";
     display: table;
     clear: both;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .graph-col {
+      width: 50%;
+    }
   }
 
   @media screen and (max-width: 920px) {

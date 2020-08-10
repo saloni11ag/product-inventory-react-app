@@ -22,7 +22,7 @@
       "product_name": "Micromax UHD LED",
       "product_price": "120",
       "product_quantity": "4",
-      "product_img": "images/prod2.jpg"
+      "product_img": "images/prod1.jpg"
     },
     {
       "id": 4,
@@ -143,7 +143,7 @@
       "week3": "23",
       "week4": "17",
       "week5": "9",
-      "week6": "11"
+      "week6": "3"
     },
     {
       "id": 2,
@@ -163,7 +163,7 @@
       "week3": "15",
       "week4": "20",
       "week5": "9",
-      "week6": "20"
+      "week6": "4"
     },
     {
       "id": 4,
@@ -183,7 +183,7 @@
       "week3": "5",
       "week4": "17",
       "week5": "9",
-      "week6": "21"
+      "week6": "2"
     },
     {
       "id": 6,

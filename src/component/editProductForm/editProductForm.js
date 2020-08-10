@@ -128,8 +128,14 @@ class EditProductForm extends Component {
 
     submitClicked = (event) => {
         console.log("submit clicked!!")
+        // console.log(this.state.product_img);
+        let imgPath =  this.state.product_img.substr(0,6);
         let imgsrc = this.state.product_img.substr(12);
-        let prodImg = 'images/' + imgsrc
+        if(imgPath === 'images'){
+            var prodImg = this.state.product_img
+        } else{
+        var prodImg = 'images/' + imgsrc
+        }
         // console.log(this.state)
         let reqBody = {
             "product_name": this.state.product_name,
@@ -192,7 +198,7 @@ class EditProductForm extends Component {
                             <label >Product Image:</label>
                         </div>
                         <div className="col-75">
-                            <input type="file" className="input-text" id="product_img" name="product_img" onChange={this.changeHandler} required />
+                            <input type="file" className="input-text" id="product_img" name="product_img" onChange={this.changeHandler} />
                         </div>
                     </div>
                     <div className="row">
