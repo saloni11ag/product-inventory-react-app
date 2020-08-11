@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './productDisplay.css'
 import ProductDetails from '../productDetails/productDetails';
-import {  withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import axios from 'axios';
 
 class ProductDisplay extends Component {
@@ -20,8 +20,26 @@ class ProductDisplay extends Component {
         this.getAllCategories()
     }
 
-    deleteProduct = (id) => {
+    deleteProduct = (id, categoryname, quantity) => {
         console.log(id)
+        var temCat = this.state.allCategories.filter(cat => {
+            return cat.category_name === categoryname
+        })
+        let tempStock = temCat[0].stock
+        tempStock = tempStock - parseInt(quantity)
+        let stockreq = {
+            "stock": tempStock
+        }
+        axios.patch('http://localhost:3000/allCategories/' + temCat[0].id, stockreq)
+            .then(
+                response => {
+                    // console.log(response);
+                    // this.props.history.push('/home');
+                    // this.props.history.push('/')
+                }, error => {
+                    console.error(error);
+                }
+            )
         axios.delete('http://localhost:3000/allProducts/' + id)
             .then(response => {
                 // console.log(response)
@@ -69,6 +87,7 @@ class ProductDisplay extends Component {
                         price={product.product_price}
                         quantity={product.product_quantity}
                         img={product.product_img}
+                        categoryname = {product.category_name}
                         deleteProduct={this.deleteProduct}
                     ></ProductDetails>
                 </div>
@@ -122,9 +141,9 @@ class ProductDisplay extends Component {
 
     render() {
 
-    // let categoriesInDropdown = this.state.allCategories.map(cat => {
-    //     return (<option key={cat.id} value={cat.category_name}>{cat.category_name}</option>)
-    // })
+        // let categoriesInDropdown = this.state.allCategories.map(cat => {
+        //     return (<option key={cat.id} value={cat.category_name}>{cat.category_name}</option>)
+        // })
         return (
             <div>
                 <div className="home-page">
@@ -133,7 +152,7 @@ class ProductDisplay extends Component {
                     <div className="select-category">
                         <span style={{ marginLeft: "50px" }}>Select By Category  </span>
                         <select name="categoryname" className="input-category" onChange={this.selectChange} >
-                            <option value= "all">All Categories</option>
+                            <option value="all">All Categories</option>
                             {this.displayCategories()}
                             {/* {categoriesInDropdown} */}
                         </select>

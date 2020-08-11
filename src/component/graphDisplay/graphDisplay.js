@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import GraphDetailsComponent from '../graphDetails/graphDetails';
 import './graphDisplay.css';
 import axios from 'axios';
+import ProductGraph from '../productGraph/productGraph';
 
 class GraphDisplayComponent extends Component {
     constructor(props) {
@@ -75,7 +76,7 @@ class GraphDisplayComponent extends Component {
     rendorAllGraphs = () => {
         return this.state.allInventory.map(obj => {
             return (
-                <div key ={obj.id} className="graph-col">
+                <div key={obj.id} className="graph-col">
                     <GraphDetailsComponent
                         key={obj.id}
                         product_name={obj.product_name}
@@ -110,7 +111,10 @@ class GraphDisplayComponent extends Component {
             );
         } else {
             return (
-                <div className="graph-row">{this.rendorAllGraphs()}</div>
+                <div>
+                    <div className="category-graph" ><ProductGraph></ProductGraph></div>
+                    <div className="graph-row">{this.rendorAllGraphs()}</div>
+                </div>
             );
         }
     }

@@ -140,6 +140,25 @@ class AddProductForm extends Component {
             )
 
 
+        var temCat = this.state.allCategories.filter(cat => {
+            return cat.category_name === this.state.categoryname
+        })
+        // console.log(temCat[0].id)
+        let tempStock = temCat[0].stock
+        tempStock = tempStock + parseInt(this.state.productquantity)
+        let stockreq = {
+            "stock": tempStock
+        }
+        axios.patch('http://localhost:3000/allCategories/'+ temCat[0].id, stockreq)
+            .then(
+                response => {
+                    // console.log(response);
+                    this.props.history.push('/home');
+                    // this.props.history.push('/')
+                }, error => {
+                    console.error(error);
+                }
+            )
         // event.preventDefault()
         alert("Added Product")
     }

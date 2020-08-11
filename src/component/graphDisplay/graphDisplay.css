@@ -7,7 +7,7 @@
   }
 
   .graph-col {
-    margin-top: 50px;
+    margin-top: 80px;
     float: left;
     width: 33%;
     padding: 10px;
@@ -19,6 +19,9 @@
     clear: both;
   }
 
+  .category-graph{
+    margin-left: 0;
+  }
   @media screen and (max-width: 1220px) {
     .graph-col {
       width: 50%;

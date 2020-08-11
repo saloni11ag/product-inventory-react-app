@@ -123,15 +123,23 @@
   "allCategories": [
     {
       "id": 1,
-      "category_name": "Electronics"
+      "category_name": "Electronics",
+      "stock": 34
     },
     {
       "id": 2,
-      "category_name": "Accessories"
+      "category_name": "Accessories",
+      "stock": 7
     },
     {
       "id": 3,
-      "category_name": "Clothing"
+      "category_name": "Clothing",
+      "stock": 11
+    },
+    {
+      "category_name": "Tops",
+      "stock": 0,
+      "id": 4
     }
   ],
   "inventory": [

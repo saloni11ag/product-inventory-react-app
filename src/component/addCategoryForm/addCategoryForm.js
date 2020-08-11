@@ -85,6 +85,7 @@ class AddCategoryForm extends Component {
         // console.log(this.state)
         let reqBody = {
             "category_name": this.state.categoryname,
+            "stock": 0
         }
         axios.post('http://localhost:3000/allCategories', reqBody)
             .then(

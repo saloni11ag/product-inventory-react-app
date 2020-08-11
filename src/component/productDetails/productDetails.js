@@ -19,7 +19,7 @@ class ProductDetails extends Component {
         event.preventDefault()
     }
     deleteClick = () => {
-        this.props.deleteProduct(this.props.id)
+        this.props.deleteProduct(this.props.id, this.props.categoryname, this.props.quantity)
     }
 
     productClick = () => {
