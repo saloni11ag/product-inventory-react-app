@@ -45,3 +45,18 @@
 /* #signup-submit:after{
  clear: both;
 } */
+
+@media screen and (max-width: 1024px) {
+    #signup-form {
+        /* margin-top: 100px; */
+        width: 80%;
+    }
+  }
+
+@media screen and (max-width: 500px) {
+    #signup-form {
+        /* margin-top: 100px; */
+        width: 100%;
+    }
+  }
+  
