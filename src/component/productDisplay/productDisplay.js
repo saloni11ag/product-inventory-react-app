@@ -87,7 +87,7 @@ class ProductDisplay extends Component {
                         price={product.product_price}
                         quantity={product.product_quantity}
                         img={product.product_img}
-                        categoryname = {product.category_name}
+                        categoryname={product.category_name}
                         deleteProduct={this.deleteProduct}
                     ></ProductDetails>
                 </div>
@@ -139,6 +139,41 @@ class ProductDisplay extends Component {
         })
     }
 
+    sortChange = (event) => {
+        let val = event.target.value;
+        if (val === "all-product") {
+            this.setState({ allProducts: this.state.searchProducts })
+        } else if (val === "product-asc") {
+            var prods_list = [].concat(this.state.searchProducts)
+                .sort((a, b) => {
+                    if (a.product_name < b.product_name) { return -1; }
+                })
+            this.setState({ allProducts: prods_list })
+            console.log(prods_list);
+        } else if (val === "product-desc") {
+            var prods_list = [].concat(this.state.searchProducts)
+                .sort((a, b) => {
+                    if (a.product_name > b.product_name) { return -1; }
+                })
+            this.setState({ allProducts: prods_list })
+            console.log(prods_list);
+        } else if (val === "price-asc") {
+            var prods_list = [].concat(this.state.searchProducts)
+                .sort((a, b) => {
+                    if (a.product_price < b.product_price) { return -1; }
+                })
+            this.setState({ allProducts: prods_list })
+            console.log(prods_list);
+        } else if (val === "price-desc") {
+            var prods_list = [].concat(this.state.searchProducts)
+                .sort((a, b) => {
+                    if (a.product_price > b.product_price) { return -1; }
+                })
+            this.setState({ allProducts: prods_list })
+            console.log(prods_list);
+        }
+    }
+
     render() {
 
         // let categoriesInDropdown = this.state.allCategories.map(cat => {
@@ -155,6 +190,16 @@ class ProductDisplay extends Component {
                             <option value="all">All Categories</option>
                             {this.displayCategories()}
                             {/* {categoriesInDropdown} */}
+                        </select>
+                    </div>
+                    <div style={{ display: "inline" }}>
+                        <span style={{ marginLeft: "30px" }}>Sort By: </span>
+                        <select name="sort" className="input-sort-product" onChange={this.sortChange} >
+                            <option value="all-product">---  sort by  ---</option>
+                            <option value="product-asc">Ascending A to Z</option>
+                            <option value="product-desc">Descending Z to A</option>
+                            <option value="price-asc">Price Low To High</option>
+                            <option value="price-desc">Price High To Low</option>
                         </select>
                     </div>
                     <div className="search-container">
