@@ -20,7 +20,7 @@
   }
 
   .category-graph{
-    margin-left: 0;
+    margin-left: 25%;
   }
   @media screen and (max-width: 1220px) {
     .graph-col {

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Chart from "react-google-charts";
 import axios from 'axios'
+import './productGraph.css'
 
 class ProductGraph extends Component {
     constructor(props) {
@@ -42,6 +43,7 @@ class ProductGraph extends Component {
                     width={'400px'}
                     height={'300px'}
                     chartType="PieChart"
+                    className = "product-graph-size"
                     loader={<div>Loading Chart</div>}
                     data={this.state.chartData}
                     options={{
