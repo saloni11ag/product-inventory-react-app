@@ -140,6 +140,11 @@
       "category_name": "Tops",
       "stock": 0,
       "id": 4
+    },
+    {
+      "category_name": "Decor",
+      "stock": 0,
+      "id": 5
     }
   ],
   "inventory": [

@@ -124,12 +124,18 @@ class ProductDisplay extends Component {
         let val = event.target.value;
         // console.log(val)
         if (val === "all") {
+            this.setState({ message: false })
             this.setState({ allProducts: this.state.searchProducts })
         } else {
             let filteredProducts = this.state.searchProducts.filter(prod => {
                 return prod.category_name === val
             })
-            this.setState({ allProducts: filteredProducts })
+            if (filteredProducts.length === 0) {
+                this.setState({ message: true })
+            } else {
+                this.setState({ message: false })
+                this.setState({ allProducts: filteredProducts })
+            }
         }
     }
 
@@ -185,7 +191,7 @@ class ProductDisplay extends Component {
                     <button className="addbutton button1" onClick={this.addProductClick}>Add Product</button>
                     <button className="addbutton button1" onClick={this.addCategoryClick}>Add Category</button>
                     <div className="select-category">
-                        <span style={{ marginLeft: "50px" }}>Select By Category  </span>
+                        <span style={{ marginLeft: "50px" }}>Filter By Category  </span>
                         <select name="categoryname" className="input-category" onChange={this.selectChange} >
                             <option value="all">All Categories</option>
                             {this.displayCategories()}
@@ -210,7 +216,7 @@ class ProductDisplay extends Component {
                         </form>
                     </div>
                     <div className="prod-row">
-                        {this.displayProducts()}
+                        {this.state.message ? <div className="error-message">No Product Available Right Now</div> : this.displayProducts() }
                     </div>
                 </div>
             </div>
