@@ -84,7 +84,7 @@
   /* Float four columns side by side */
 .prod-column {
   float: left;
-  width: 33%;
+  width: 31%;
   padding: 0 10px;
 }
 
@@ -101,11 +101,24 @@
 .error-message {
   margin-left: 500px
 }
+
+.sort-by {
+  display: inline;
+}
 @media screen and (max-width: 1024px) {
   .prod-column {
-    width: 50%;
+    width: 47%;
     display: block;
     margin-bottom: 20px;
+  }
+  .search-container {
+    margin-top: -4px;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .second-nav {
+    display: block;
   }
 }
 /* Responsive columns */
@@ -117,5 +130,14 @@
   }
   .error-message {
     margin-left: 100px
+  }
+  .sort-by {
+    display: block;
+  }
+  .select-category {
+    display: block;
+  }
+  .search-container {
+    display: block;
   }
 }

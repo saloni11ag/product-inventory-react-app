@@ -190,6 +190,7 @@ class ProductDisplay extends Component {
                 <div className="home-page">
                     <button className="addbutton button1" onClick={this.addProductClick}>Add Product</button>
                     <button className="addbutton button1" onClick={this.addCategoryClick}>Add Category</button>
+                    <div className="second-nav">
                     <div className="select-category">
                         <span style={{ marginLeft: "50px" }}>Filter By Category  </span>
                         <select name="categoryname" className="input-category" onChange={this.selectChange} >
@@ -198,7 +199,7 @@ class ProductDisplay extends Component {
                             {/* {categoriesInDropdown} */}
                         </select>
                     </div>
-                    <div style={{ display: "inline" }}>
+                    <div className="sort-by">
                         <span style={{ marginLeft: "30px" }}>Sort By: </span>
                         <select name="sort" className="input-sort-product" onChange={this.sortChange} >
                             <option value="all-product">---  sort by  ---</option>
@@ -214,6 +215,7 @@ class ProductDisplay extends Component {
                                 value={this.state.search} onChange={this.handleChange} />
                             <button type="submit"><i className="fa fa-search"></i></button>
                         </form>
+                    </div>
                     </div>
                     <div className="prod-row">
                         {this.state.message ? <div className="error-message">No Product Available Right Now</div> : this.displayProducts() }

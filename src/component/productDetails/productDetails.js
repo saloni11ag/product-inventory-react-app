@@ -35,6 +35,7 @@ class ProductDetails extends Component {
                     <img src={this.props.img} alt="product-img" width="100%" height="360px" />
                     <div className="product-container">
                         <h4><b>Product Name:   {this.props.name}</b></h4>
+                        <p><b>Category: </b> {this.props.categoryname}</p>
                         <p><b>Price: </b> {this.props.price}$</p>
                         <p><b>Quantity: </b> {this.props.quantity}</p>
                     </div>
