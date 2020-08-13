@@ -54,7 +54,7 @@
   /* For search bar */
   .search-container {
     float: right;
-    padding: 6px;
+    /* padding: 6px; */
     /* margin-top: 8px; */
     font-size: 17px;
     border: none;
@@ -111,9 +111,9 @@
     display: block;
     margin-bottom: 20px;
   }
-  .search-container {
+  /* .search-container {
     margin-top: -4px;
-  }
+  } */
 }
 
 @media screen and (max-width: 770px) {
@@ -121,7 +121,7 @@
     display: block;
   }
   .search-container {
-    margin-top: -5px;
+    margin-top: 1px;
   }
 }
 /* Responsive columns */
@@ -142,6 +142,6 @@
   }
   .search-container {
     display: block;
-    margin-top: 1px;
+    margin-top: 2px;
   }
 }
