@@ -1,28 +1,12 @@
 import React from 'react';
 import './App.css';
-import { Switch, Route } from 'react-router-dom';
-import LoginComponent from './container/login/login';
-import SignupComponent from './container/signup/signup'
-import HomeComponent from './container/home/home';
-import DashboardComponent from './container/dashboard/dashboard';
-import AddProduct from './component/addProduct/addProduct';
-import EditProduct from './component/editProduct/editProduct';
-import AddCategory from './component/addCategory/addCategory';
+import Routing from './Routing';
 
 function App() {
   return (
     <div className="App">
-      <Switch>
-       <Route exact path="/" render={() => <LoginComponent></LoginComponent>} />
-       {/* <Route exact path="/" component={LoginComponent} /> */}
-       <Route exact path="/sign-up" component={SignupComponent} />
-       <Route exact path="/home" component={HomeComponent} /> 
-       <Route exact path="/dashboard/" component={DashboardComponent} /> 
-       <Route exact path="/dashboard/:id" component={DashboardComponent} /> 
-       <Route exact path="/addProduct" component={AddProduct} /> 
-       <Route exact path="/addCategory" component={AddCategory} /> 
-       <Route exact path="/editProduct/:id" render={() => <EditProduct />} /> 
-      </Switch>
+      {/* <LoginComponent></LoginComponent> */}
+      <Routing></Routing>
     </div>
   );
 }
