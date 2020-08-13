@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component,  useState, useEffect } from 'react';
 import './productDisplay.css'
 import ProductDetails from '../productDetails/productDetails';
 import { withRouter } from 'react-router-dom';
 import axios from 'axios';
+import Pagination from './pagination';
 
 class ProductDisplay extends Component {
     constructor(props) {
@@ -11,7 +12,9 @@ class ProductDisplay extends Component {
             allProducts: [],
             searchProducts: [],
             allCategories: [],
-            search: ''
+            search: '',
+            currentPage: 1,
+            postsPerPage: 6
         }
     }
 
@@ -77,7 +80,13 @@ class ProductDisplay extends Component {
             })
     }
     displayProducts = () => {
-        return this.state.allProducts.map(product => {
+        this.indexOfLastPost = this.state.currentPage * this.state.postsPerPage;
+        this.indexOfFirstPost = this.indexOfLastPost - this.state.postsPerPage;
+        // console.log("this.indexOfFirstPost" + this.indexOfFirstPost)
+        // console.log("indexOfLastPost" + this.indexOfLastPost);
+        this.currentPosts = this.state.allProducts.slice(this.indexOfFirstPost, this.indexOfLastPost);
+        // console.log(this.currentPosts)
+        return this.currentPosts.map(product => {
             return (
                 <div key={product.id} className="prod-column">
                     <ProductDetails
@@ -180,6 +189,11 @@ class ProductDisplay extends Component {
         }
     }
 
+    paginate = pageNumber => {
+        // setCurrentPage(pageNumber);
+        console.log("pagenum"+pageNumber)
+        this.setState({currentPage: pageNumber})
+    } 
     render() {
 
         // let categoriesInDropdown = this.state.allCategories.map(cat => {
@@ -220,6 +234,11 @@ class ProductDisplay extends Component {
                     <div className="prod-row">
                         {this.state.message ? <div className="error-message">No Product Available Right Now</div> : this.displayProducts() }
                     </div>
+                    <Pagination
+                        postsPerPage={this.state.postsPerPage}
+                        totalPosts={this.state.allProducts.length}
+                        paginate={this.paginate}
+                    ></Pagination>
                 </div>
             </div>
         );

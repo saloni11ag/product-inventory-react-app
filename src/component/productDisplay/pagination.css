@@ -1,0 +1,16 @@
+.page-item {
+  display: inline;
+  padding: 5px;
+  border: 1px solid blue;
+}
+
+.page-item {
+  cursor: pointer;
+  /* text-decoration: underline; */
+  color: blue;
+}
+
+.page-item:hover {
+/* cursor: pointer; */
+text-decoration: underline;
+}
