@@ -114,7 +114,7 @@ class SignupComponent extends Component {
             .then(
                 response => {
                     console.log(response);
-                    this.props.history.push('/home');
+                    this.props.history.push('/');
                     // this.props.history.push('/')
                 }, error => {
                     console.error(error);
@@ -130,29 +130,33 @@ class SignupComponent extends Component {
                     <div id="signup-form">
                         <header id="signup-header">SIGN-UP</header>
                         <form onSubmit={this.contactSubmit}>
+                        <label style={{marginLeft:"5px"}}>FirstName</label>
                             <fieldset className="signupform-legend">
-                                <legend >FirstName</legend>
+                                {/* <legend >FirstName</legend> */}
                                 <input type="text" className="input-tag" name="firstname" autoComplete="off"
                                 onChange={this.changeHandler} title="Name should consists of letters and more than length 3" required/>
                                 <span style={{ color: "red", fontSize: "14px" }}>{this.state.errors["firstname"]}</span>
                             </fieldset>
                             <br />
+                            <label style={{marginLeft:"5px"}} >LastName</label>
                             <fieldset className="signupform-legend">
-                                <legend >LastName</legend>
+                                {/* <legend >LastName</legend> */}
                                 <input type="text" className="input-tag" name="lastname" autoComplete="off"
                                 onChange={this.changeHandler} title="Name should consists of letters and more than length 3" required/>
                                 <span style={{ color: "red", fontSize: "14px" }}>{this.state.errors["lastname"]}</span>
                             </fieldset>
                             <br />
+                            <label style={{marginLeft:"5px"}}>Eamil Id</label>
                             <fieldset className="signupform-legend">
-                                <legend >Eamil Id</legend>
+                                {/* <legend >Eamil Id</legend> */}
                                 <input type="text" className="input-tag" name="emailid" autoComplete="off"
-                                onChange={this.changeHandler} required/>
+                                onChange={this.changeHandler} pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required/>
                                 <span style={{ color: "red", fontSize: "14px" }}>{this.state.errors["emailid"]}</span>
                             </fieldset>
                             <br />
+                            <label style={{marginLeft:"5px"}} >Password</label>
                             <fieldset className="signupform-legend">
-                                <legend >Password</legend>
+                                {/* <legend >Password</legend> */}
                                 <input type="password" className="input-tag" name="password" 
                                 onChange={this.changeHandler} title="Should have atleast 5 characters" required/>
                                 <span style={{ color: "red", fontSize: "14px" }}>{this.state.errors["password"]}</span>

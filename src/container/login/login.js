@@ -69,15 +69,17 @@ class LoginComponent extends Component {
                     <div id="login-form">
                         <header id="login-header">LOG-IN</header>
                         <form onSubmit={this.submitForm}>
+                            <label style={{marginLeft:"5px"}}>EmailId</label>
                             <fieldset className="form-legend">
-                                <legend>EmailId</legend>
+                                {/* <legend>EmailId</legend> */}
                                 <input type="text" name="email_id" className="logininput-tag" 
-                                onChange={this.changeHandler} autoComplete="off" />
+                                onChange={this.changeHandler} autoComplete="off" placeholder="Enter Email Id..." />
                             </fieldset>
                             <br />
+                            <label style={{marginLeft:"5px"}}>Password</label>
                             <fieldset className="form-legend">
-                                <legend>Password</legend>
-                                <input type="password" name="password" className="logininput-tag" onChange={this.changeHandler} />
+                                {/* <legend>Password</legend> */}
+                                <input type="password" name="password" className="logininput-tag" onChange={this.changeHandler}  placeholder="Enter Password..." />
                             </fieldset>
                             <br />
                             <button id="login-submit">LOGIN</button>
