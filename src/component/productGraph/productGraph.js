@@ -20,7 +20,7 @@ class ProductGraph extends Component {
             .then(response => {
                 // console.log(response.data)
                 this.setState({ allCategories: response.data })
-                console.log(this.state.allCategories);
+                // console.log(this.state.allCategories);
                 const chartData = [['Category', 'Stock Available']]
                 this.state.allCategories.map(obj => {
                     chartData.push([obj.category_name, obj.stock])
@@ -28,7 +28,7 @@ class ProductGraph extends Component {
                 this.setState({
                     chartData: chartData,
                 })
-                console.log(this.state.chartData);
+                // console.log(this.state.chartData);
             }, error => {
                 console.error(error);
             })

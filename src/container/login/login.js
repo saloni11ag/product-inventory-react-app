@@ -43,9 +43,9 @@ class LoginComponent extends Component {
         var tempUser = this.state.allUsers.filter(user => {
             return user.email_id === this.state.email_id && user.password === this.state.password
         })
-        console.log(tempUser)
+        // console.log(tempUser)
         if(tempUser.length === 0){
-            console.log("invalid username or password")
+            // console.log("invalid username or password")
             loginValid = false
             this.setState({error: "Invalid username or password"});
         }
@@ -56,7 +56,7 @@ class LoginComponent extends Component {
         e.preventDefault();
 
         if(this.handleValidation()){
-           console.log("login validated");
+        //    console.log("login validated");
            this.props.history.push('/home')
         }else{
            console.log("invalid username or password");

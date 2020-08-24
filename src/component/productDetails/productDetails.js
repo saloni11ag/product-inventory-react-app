@@ -23,8 +23,8 @@ class ProductDetails extends Component {
     }
 
     productClick = () => {
-        console.log("product clicked")
-        console.log("id" + this.props.id)
+        // console.log("product clicked")
+        // console.log("id" + this.props.id)
         this.props.history.push(`/dashboard/${this.props.id}`)
     }
     render() {

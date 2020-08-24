@@ -27,12 +27,12 @@ class GraphDisplayComponent extends Component {
         // console.log(pathArray)
         // console.log("id"+id);
         if (id === undefined) {
-            console.log("no id")
+            // console.log("no id")
             this.setState({ withId: false })
             this.getAllInventoryInfo()
         }
         else {
-            console.log(id)
+            // console.log(id)
             this.setState({ withId: true })
             this.getInventoryInfo(id)
         }

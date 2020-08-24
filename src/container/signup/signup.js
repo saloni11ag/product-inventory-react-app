@@ -20,7 +20,7 @@ class SignupComponent extends Component {
         let name = event.target.name;
         let val = event.target.value;
         this.setState({ [name]: val });
-        console.log(this.state)
+        // console.log(this.state)
         // this.handleValidation()
     }
 
@@ -95,15 +95,15 @@ class SignupComponent extends Component {
         e.preventDefault();
 
         if (this.handleValidation()) {
-            console.log("Form submitted");
+            // console.log("Form submitted");
             this.registerUser();
         } else {
             console.log("Form has errors.");
         }
     }
     registerUser = (event) => {
-        console.log("submit clicked!!")
-        console.log(this.state)
+        // console.log("submit clicked!!")
+        // console.log(this.state)
         let reqBody = {
             "first_name": this.state.firstname,
             "last_name": this.state.lastname,
@@ -113,7 +113,7 @@ class SignupComponent extends Component {
         axios.post('http://localhost:3000/allUsers', reqBody)
             .then(
                 response => {
-                    console.log(response);
+                    // console.log(response);
                     this.props.history.push('/');
                     // this.props.history.push('/')
                 }, error => {
@@ -121,7 +121,7 @@ class SignupComponent extends Component {
                 }
             )
         // event.preventDefault()
-        alert("User created")
+        // alert("User created")
     }
     render() {
         return (

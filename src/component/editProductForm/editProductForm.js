@@ -47,7 +47,7 @@ class EditProductForm extends Component {
                 response => {
                     // console.log(response.data)
                     this.setState({ inventoryInfo: response.data })
-                    console.log(this.state.inventoryInfo)
+                    // console.log(this.state.inventoryInfo)
                 }, error => {
                     console.error(error);
                 }
@@ -59,7 +59,7 @@ class EditProductForm extends Component {
         let name = event.target.name;
         let val = event.target.value;
         this.setState({ [name]: val });
-        console.log(this.state)
+        // console.log(this.state)
     }
 
     handleValidation() {
@@ -68,7 +68,7 @@ class EditProductForm extends Component {
         let productprice = this.state.product_price
         let errors = {};
         let formIsValid = true;
-        console.log(productname);
+        // console.log(productname);
         //Name
         if (productname.length < 3) {
             formIsValid = false;
@@ -119,15 +119,15 @@ class EditProductForm extends Component {
         e.preventDefault();
 
         if (this.handleValidation()) {
-            console.log("Form submitted");
+            // console.log("Form submitted");
             this.submitClicked();
         } else {
-            console.log("Form has errors.");
+            // console.log("Form has errors.");
         }
     }
 
     submitClicked = (event) => {
-        console.log("submit clicked!!")
+        // console.log("submit clicked!!")
         let inventoryInfo = this.state.inventoryInfo
         let inventoryreqBody
         // console.log(this.state.product_img);
@@ -157,7 +157,7 @@ class EditProductForm extends Component {
                 }
             )
         if (!inventoryInfo.week2 ) {
-            console.log("in week2");
+            // console.log("in week2");
             inventoryreqBody = {
                 "product_name": this.state.product_name,
                 "week2": this.state.product_quantity,
@@ -178,7 +178,7 @@ class EditProductForm extends Component {
                 "week5": this.state.product_quantity,
             }
         }  else{
-            console.log("in week6");
+            // console.log("in week6");
             inventoryreqBody = {
                 "product_name": this.state.product_name,
                 "week6": this.state.product_quantity,
@@ -196,7 +196,7 @@ class EditProductForm extends Component {
                 }
             )
 
-        alert("Editted Product")
+        // alert("Editted Product")
     }
     render() {
         return (<div>

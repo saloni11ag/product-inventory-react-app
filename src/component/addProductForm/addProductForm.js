@@ -40,7 +40,7 @@ class AddProductForm extends Component {
         let productname = this.state.productname;
         let productquantity = this.state.productquantity
         let productprice = this.state.productprice
-        console.log(this.state.productquantity)
+        // console.log(this.state.productquantity)
         let errors = {};
         let formIsValid = true;
 
@@ -95,14 +95,14 @@ class AddProductForm extends Component {
         e.preventDefault();
 
         if (this.handleValidation()) {
-            console.log("Form submitted");
+            // console.log("Form submitted");
             this.submitProduct();
         } else {
-            console.log("Form has errors.");
+            // console.log("Form has errors.");
         }
     }
     submitProduct = (event) => {
-        console.log("submit clicked!!")
+        // console.log("submit clicked!!")
         // console.log(this.state)
         let imgsrc = this.state.product_img.substr(12);
         let prodImg = 'images/' + imgsrc
@@ -131,7 +131,7 @@ class AddProductForm extends Component {
         axios.post('http://localhost:3000/inventory', inventoryreqBody)
             .then(
                 response => {
-                    console.log(response);
+                    // console.log(response);
                     this.props.history.push('/home');
                     // this.props.history.push('/')
                 }, error => {
@@ -160,7 +160,7 @@ class AddProductForm extends Component {
                 }
             )
         // event.preventDefault()
-        alert("Added Product")
+        // alert("Added Product")
     }
 
     displayCategories = () => {

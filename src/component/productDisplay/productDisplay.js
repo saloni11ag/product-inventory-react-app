@@ -24,7 +24,7 @@ class ProductDisplay extends Component {
     }
 
     deleteProduct = (id, categoryname, quantity) => {
-        console.log(id)
+        // console.log(id)
         var temCat = this.state.allCategories.filter(cat => {
             return cat.category_name === categoryname
         })
@@ -164,34 +164,34 @@ class ProductDisplay extends Component {
                     if (a.product_name < b.product_name) { return -1; }
                 })
             this.setState({ allProducts: prods_list })
-            console.log(prods_list);
+            // console.log(prods_list);
         } else if (val === "product-desc") {
             var prods_list = [].concat(this.state.searchProducts)
                 .sort((a, b) => {
                     if (a.product_name > b.product_name) { return -1; }
                 })
             this.setState({ allProducts: prods_list })
-            console.log(prods_list);
+            // console.log(prods_list);
         } else if (val === "price-asc") {
             var prods_list = [].concat(this.state.searchProducts)
                 .sort((a, b) => {
                     if (a.product_price < b.product_price) { return -1; }
                 })
             this.setState({ allProducts: prods_list })
-            console.log(prods_list);
+            // console.log(prods_list);
         } else if (val === "price-desc") {
             var prods_list = [].concat(this.state.searchProducts)
                 .sort((a, b) => {
                     if (a.product_price > b.product_price) { return -1; }
                 })
             this.setState({ allProducts: prods_list })
-            console.log(prods_list);
+            // console.log(prods_list);
         }
     }
 
     paginate = pageNumber => {
         // setCurrentPage(pageNumber);
-        console.log("pagenum"+pageNumber)
+        // console.log("pagenum"+pageNumber)
         this.setState({currentPage: pageNumber})
     } 
     render() {

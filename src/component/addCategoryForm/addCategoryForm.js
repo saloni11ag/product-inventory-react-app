@@ -51,7 +51,7 @@ class AddCategoryForm extends Component {
               return  cat.category_name.toLowerCase() === categoryname.toLowerCase()
             })
 
-            console.log(temp);
+            // console.log(temp);
 
             if(temp.length  > 0 ){
                 formIsValid = false;
@@ -74,14 +74,14 @@ class AddCategoryForm extends Component {
         e.preventDefault();
 
         if (this.handleValidation()) {
-            console.log("Form submitted");
+            // console.log("Form submitted");
             this.submitProduct();
         } else {
-            console.log("Form has errors.");
+            // console.log("Form has errors.");
         }
     }
     submitProduct = (event) => {
-        console.log("submit clicked!!")
+        // console.log("submit clicked!!")
         // console.log(this.state)
         let reqBody = {
             "category_name": this.state.categoryname,
