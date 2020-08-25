@@ -95,6 +95,14 @@
       "product_price": "180",
       "product_quantity": "7",
       "product_img": "images/prod12.jpg"
+    },
+    {
+      "category_name": "Electronics",
+      "product_name": "test",
+      "product_price": "456",
+      "product_quantity": "45",
+      "product_img": "images/product-ex.jfif",
+      "id": 13
     }
   ],
   "allUsers": [
@@ -124,7 +132,7 @@
     {
       "id": 1,
       "category_name": "Electronics",
-      "stock": 34
+      "stock": 79
     },
     {
       "id": 2,
@@ -267,6 +275,11 @@
       "week4": "27",
       "week5": "19",
       "week6": "9"
+    },
+    {
+      "product_name": "test",
+      "week1": "45",
+      "id": 13
     }
   ]
 }

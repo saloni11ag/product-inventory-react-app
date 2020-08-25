@@ -201,7 +201,7 @@ class EditProductForm extends Component {
     render() {
         return (<div>
             <div className="container">
-                <header id="editProduct-header">EDIT PRODUCT</header>
+                <header data-testid="editProduct" id="editProduct-header">EDIT PRODUCT</header>
                 <form onSubmit={this.contactSubmit}>
                     <div className="row">
                         <div className="col-25">
@@ -214,7 +214,7 @@ class EditProductForm extends Component {
                     </div>
                     <div className="row">
                         <div className="col-25">
-                            <label>Product Name:</label>
+                            <p data-testid="productname">Product Name:</p>
                         </div>
                         <div className="col-75">
                             <input type="text" className="input-text" id="productname" name="product_name" value={this.state.product_name}

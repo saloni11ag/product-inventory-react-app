@@ -128,7 +128,7 @@ class SignupComponent extends Component {
             <div style={{ height: "100%", width: "100%" }} >
                 <div >
                     <div id="signup-form">
-                        <header id="signup-header">SIGN-UP</header>
+                        <header data-testid="signup" id="signup-header">SIGN-UP</header>
                         <form onSubmit={this.contactSubmit}>
                         <label style={{marginLeft:"5px"}}>FirstName</label>
                             <fieldset className="signupform-legend">

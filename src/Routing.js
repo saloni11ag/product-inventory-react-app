@@ -15,7 +15,7 @@ class Routing extends Component {
     }
     render() {
         return (<Switch>
-            <Route exact path="/" render={() => <LoginComponent></LoginComponent>} />
+            <Route exact path="/" component={LoginComponent} />
             {/* <Route exact path="/" component={LoginComponent} /> */}
             <Route exact path="/sign-up" component={SignupComponent} />
             <Route exact path="/home" component={HomeComponent} />
@@ -23,7 +23,7 @@ class Routing extends Component {
             <Route exact path="/dashboard/:id" component={DashboardComponent} />
             <Route exact path="/addProduct" component={AddProduct} />
             <Route exact path="/addCategory" component={AddCategory} />
-            <Route exact path="/editProduct/:id" render={() => <EditProduct />} />
+            <Route exact path="/editProduct/:id" component ={EditProduct} />
         </Switch>);
     }
 }

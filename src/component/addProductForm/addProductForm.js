@@ -172,7 +172,7 @@ class AddProductForm extends Component {
         return (
             <div>
                 <div className="container">
-                    <header id="addProduct-header">ADD PRODUCT</header>
+                    <header data-testid="addProduct" id="addProduct-header">ADD PRODUCT</header>
                     <form onSubmit={this.contactSubmit}>
                         <div className="row">
                             <div className="col-25">
@@ -186,7 +186,7 @@ class AddProductForm extends Component {
                         </div>
                         <div className="row">
                             <div className="col-25">
-                                <label>Product Name:</label>
+                                <label data-testid="name" >Product Name:</label>
                             </div>
                             <div className="col-75">
                                 <input type="text" className="input-text" id="productname" name="productname" autoComplete="off"
