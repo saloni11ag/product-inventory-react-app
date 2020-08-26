@@ -67,7 +67,7 @@ class LoginComponent extends Component {
             <div style={{ height: "100%", width: "100%" }}>
                 <div>
                     <div id="login-form">
-                        <header id="login-header">LOG-IN</header>
+                        <header data-testid="login" id="login-header">LOG-IN</header>
                         <form onSubmit={this.submitForm}>
                             <label style={{marginLeft:"5px"}}>EmailId</label>
                             <fieldset className="form-legend">

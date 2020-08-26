@@ -104,11 +104,11 @@ class AddCategoryForm extends Component {
         return ( 
             <div>
                 <div className="container">
-                    <header id="addProduct-header">ADD CATEGORY</header>
+                    <header data-testid="addCategory" id="addProduct-header">ADD CATEGORY</header>
                     <form onSubmit={this.contactSubmit}>
                         <div className="row">
                             <div className="col-25">
-                                <label>Category Name:</label>
+                                <label data-testid="name" >Category Name:</label>
                             </div>
                             <div className="col-75">
                                 <input type="text" className="input-text" id="categoryname" name="categoryname" autoComplete="off"
